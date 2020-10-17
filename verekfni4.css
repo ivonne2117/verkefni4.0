@@ -1,0 +1,74 @@
+header, nav, aside, main, article, footer{
+border: 0.6px solid;
+border-color: rgb(238, 202, 177);
+}
+
+body{
+    display: grid;
+    grid-template-areas: 
+    "h"
+    "v"
+    "a"
+    "ha"
+    "f"
+    "n";
+}
+.haus{
+    grid-area: h;
+    display: grid;
+    justify-content: center;
+    background-color: aqua;
+}
+
+.navbar{
+    grid-area: n;
+    height: 3em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    background-color:rgb(165, 127, 202);
+    
+}
+
+.vinstri{
+    grid-area: v;
+    background-color: springgreen;
+}
+.adal{
+    grid-area: a;
+    background-color: violet;
+}
+.haegri{
+    grid-area: ha;
+    background-color: yellow;
+}
+.fotur{
+    grid-area: f;
+    display: grid;
+    justify-content: center;
+    background-color: rgb(235, 104, 126);
+
+}
+@media screen and (min-width:600px){
+    body{
+        display: grid;
+        grid-template-areas: 
+        "h h h h"
+        "n n n n"
+        "v a a a"
+        "ha a a a"
+        "f f f f";
+    }
+}
+@media screen and (min-width:768px){
+    body{
+        display: grid;
+        grid-template-areas: 
+        "h h h h h"
+        "n n n n n"
+        "ha a a a v"
+        "f f f f f";
+    }
+
+}
